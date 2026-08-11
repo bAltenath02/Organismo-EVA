@@ -1,2 +1,126 @@
-# Organismo-EVA
-Experimental research project on learning, memory and development of a digital organism.
+🧬 Organismo-EVA
+
+Projeto experimental de longo prazo dedicado à investigação e desenvolvimento de um organismo digital capaz de aprender, acumular conhecimento e modificar seu comportamento através da própria experiência.
+
+1. O que é
+
+O Organismo Digital não tem como objetivo ser apenas um chatbot, assistente virtual ou modelo de linguagem.
+
+O projeto busca investigar uma questão mais fundamental:
+
+«É possível criar um sistema artificial que desenvolva conhecimento e capacidades progressivamente através da experiência, em vez de receber previamente todo o seu conhecimento durante um treinamento?»
+
+A proposta é construir esse sistema gradualmente, começando por mecanismos simples e evoluindo sua arquitetura conforme os experimentos produzam novos conhecimentos.
+
+---
+
+2. Hipótese central
+
+A hipótese inicial do projeto é que uma forma de inteligência artificial pode emergir da interação contínua entre:
+
+- percepção;
+- experiência;
+- memória;
+- formação de conceitos;
+- crenças;
+- previsões;
+- ações;
+- resultados;
+- curiosidade;
+- adaptação.
+
+O objetivo não é reproduzir o cérebro humano.
+
+A intenção é investigar quais princípios mínimos podem permitir que um sistema artificial desenvolva inteligência através da experiência.
+
+---
+
+3. Objetivo
+
+Construir experimentalmente um organismo digital que seja capaz de:
+
+- adquirir informações através de experiências;
+- armazenar e organizar memórias;
+- transformar experiências em conhecimento;
+- formar e modificar conceitos;
+- desenvolver crenças com diferentes níveis de confiança;
+- criar previsões sobre o ambiente;
+- comparar previsões com resultados;
+- aprender com erros e acertos;
+- reconhecer sua própria incerteza;
+- buscar informações quando necessário;
+- adaptar seu comportamento ao longo do tempo.
+
+O projeto será desenvolvido progressivamente. Não existe uma arquitetura final definida desde o início.
+
+---
+
+4. Princípios
+
+O desenvolvimento seguirá alguns princípios fundamentais:
+
+Aprender antes de saber
+
+O organismo deve ser projetado para aprender, e não simplesmente para armazenar um conjunto previamente definido de respostas.
+
+Experiência acima de respostas
+
+O foco principal não será produzir respostas, mas construir mecanismos que permitam adquirir conhecimento através da experiência.
+
+Memória como parte do organismo
+
+A memória não será tratada apenas como histórico de conversas. Ela deverá representar experiências e conhecimentos capazes de influenciar o comportamento futuro.
+
+Incerteza
+
+Informações não serão necessariamente tratadas como verdades absolutas. O organismo deverá ser capaz de representar diferentes níveis de confiança.
+
+Curiosidade
+
+O desconhecido deverá poder gerar comportamentos de investigação.
+
+Perguntar é aprender
+
+Quando não possuir informação suficiente, o organismo deverá ser capaz de reconhecer sua incerteza e buscar esclarecimento.
+
+Experimentação
+
+Cada etapa importante deverá ser tratada como um experimento. Hipóteses poderão ser confirmadas, modificadas ou refutadas.
+
+Evolução contínua
+
+A arquitetura não será considerada definitiva. Componentes poderão ser substituídos ou completamente reescritos quando novos conhecimentos demonstrarem que uma abordagem melhor é possível.
+
+---
+
+5. Pergunta fundamental
+
+Todas as decisões do projeto devem, direta ou indiretamente, contribuir para investigar:
+
+«Quais mecanismos mínimos são necessários para que um agente artificial adquira, organize, revise e utilize conhecimento através de experiências acumuladas ao longo do tempo?»
+
+---
+
+6. Estado atual
+
+Versão: 0.1 — Fundação
+
+Status: Projeto iniciado.
+
+Neste momento, o projeto está na fase de definição de fundamentos e preparação dos primeiros experimentos.
+
+O primeiro objetivo experimental será investigar mecanismos básicos de memória e aprendizagem persistente.
+
+Nenhuma arquitetura definitiva foi estabelecida.
+
+---
+
+7. Filosofia do projeto
+
+O Organismo Digital será desenvolvido lentamente e de forma experimental.
+
+Não existe pressa para alcançar uma inteligência avançada.
+
+O objetivo é compreender cada mecanismo construído e descobrir, através de experimentos, quais abordagens realmente contribuem para o desenvolvimento do organismo.
+
+«O código pode ser reescrito. As hipóteses podem mudar. O projeto deve aprender com seus próprios resultados.»
