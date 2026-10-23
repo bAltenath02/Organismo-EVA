@@ -105,11 +105,51 @@ Todas as decisões do projeto devem, direta ou indiretamente, contribuir para in
 
 Versão: 0.1 — Fundação
 
-Status: Projeto iniciado.
+Status: Fundação técnica de persistência implementada e testada.
 
 Neste momento, o projeto está na fase de definição de fundamentos e preparação dos primeiros experimentos.
 
 O primeiro objetivo experimental será investigar mecanismos básicos de memória e aprendizagem persistente.
+
+O primeiro experimento reproduzível, [EXP-001](docs/EXP-001.md), compara uma
+generalização limitada em situações inéditas com um baseline que apenas memoriza
+casos. Ele foi deliberadamente desenhado para medir uma hipótese pequena, e não
+para alegar inteligência geral.
+
+O [EXP-002](docs/EXP-002.md) mede adaptação quando o ambiente muda. Ele torna
+explícito o custo de sua estratégia atual: favorecer experiências recentes ainda
+não equivale a reter conhecimentos úteis em condições que podem voltar.
+
+### Persistência atual
+
+O módulo `src/memoria.py` mantém dois arquivos em `data/`:
+
+- `identidade_eva.json`: identifica a instância persistente da EVA;
+- `memoria_eva.json`: registra eventos e observações estruturadas.
+
+Na primeira inicialização, os dois arquivos são criados e o evento `nascimento` é
+registrado. Nas execuções seguintes, a identidade e a memória precisam existir e
+corresponder entre si. Se apenas um arquivo estiver ausente, se o JSON não puder
+ser lido ou se não seguir o esquema esperado, a EVA interrompe a inicialização e
+preserva os arquivos existentes para diagnóstico — ela não cria uma memória vazia
+por cima deles.
+
+As gravações usam substituição atômica. O registro de observações é uma fundação
+de memória, não evidência de aprendizagem ou generalização.
+
+### Observatório local
+
+Para acompanhar os resultados dos experimentos em uma interface no navegador,
+execute na raiz do projeto:
+
+```bash
+python src/observatorio.py
+```
+
+O navegador padrão abrirá em `http://127.0.0.1:8000`. O painel pede os dados ao
+servidor local; a cada atualização, ele executa novamente os relatórios dos
+experimentos antes de mostrar as métricas. Para encerrar, volte ao terminal e
+pressione `Ctrl+C`.
 
 Nenhuma arquitetura definitiva foi estabelecida.
 

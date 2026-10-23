@@ -1,0 +1,10 @@
+# Estado local e persistente da instância em execução da EVA.
+data/
+
+# Arquivos transitórios do Python e dos testes.
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Dados regenerados pelo painel local.
+observatorio/dados_experimentos.json
