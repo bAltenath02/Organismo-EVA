@@ -18,6 +18,7 @@ from urllib.parse import urlsplit
 
 from experimentos.exp_001 import executar_experimento as executar_exp_001
 from experimentos.exp_002 import executar_experimento as executar_exp_002
+from experimentos.exp_003 import executar_experimento as executar_exp_003
 
 
 RAIZ_DO_PROJETO = Path(__file__).resolve().parents[1]
@@ -33,6 +34,7 @@ def gerar_dados() -> dict[str, object]:
     """Executa os experimentos e transforma seus resultados para o painel."""
     exp_001 = executar_exp_001()
     exp_002 = executar_exp_002()
+    exp_003 = executar_exp_003()
 
     return {
         "gerado_em": datetime.now(UTC).isoformat(),
@@ -133,6 +135,53 @@ def gerar_dados() -> dict[str, object]:
                     "ainda pode descartar evidências úteis de condições antigas."
                 ),
                 "proximo": "Separar memória de longo prazo, contexto atual e detecção de mudança.",
+            },
+            "exp003": {
+                "id": exp_003["experimento"],
+                "titulo": "Retenção quando um contexto retorna",
+                "pergunta": (
+                    "Depois de aprender regras diferentes, a EVA recupera a regra "
+                    "do contexto inicial sem precisar aprendê-la de novo?"
+                ),
+                "metricas": [
+                    ["Contextos retidos", str(exp_003["contextos_retidos"]), "bom"],
+                    [
+                        "EVA no retorno a A",
+                        _percentual(exp_003["acuracia_eva_no_retorno_a"]),
+                        "bom",
+                    ],
+                    [
+                        "Controle sem contexto",
+                        _percentual(exp_003["acuracia_controle_no_retorno_a"]),
+                        "alerta",
+                    ],
+                ],
+                "barras": [
+                    ["EVA", exp_003["acuracia_eva_no_retorno_a"]],
+                    ["Sem contexto", exp_003["acuracia_controle_no_retorno_a"]],
+                ],
+                "colunas": [
+                    "Massa",
+                    "Força",
+                    "Resultado real",
+                    "Memória por contexto",
+                    "Controle recente",
+                ],
+                "linhas": [
+                    [
+                        caso["massa"],
+                        caso["forca"],
+                        caso["resultado_real"],
+                        caso["previsao_eva"],
+                        caso["previsao_controle"],
+                    ]
+                    for caso in exp_003["avaliacao_retorno_a"]
+                ],
+                "limitacao": (
+                    "O contexto A/B é informado ao modelo. Ainda não testamos se a "
+                    "EVA consegue detectar sozinha que o contexto mudou."
+                ),
+                "proximo": "Detectar mudanças de contexto a partir das próprias evidências.",
             },
         },
     }

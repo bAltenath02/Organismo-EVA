@@ -120,6 +120,9 @@ O [EXP-002](docs/EXP-002.md) mede adaptação quando o ambiente muda. Ele torna
 explícito o custo de sua estratégia atual: favorecer experiências recentes ainda
 não equivale a reter conhecimentos úteis em condições que podem voltar.
 
+O [EXP-003](docs/EXP-003.md) mede se separar modelos por contextos observáveis
+permite recuperar uma capacidade quando um contexto anterior retorna.
+
 ### Persistência atual
 
 O módulo `src/memoria.py` mantém dois arquivos em `data/`:

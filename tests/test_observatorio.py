@@ -14,6 +14,7 @@ class TestObservatorio(unittest.TestCase):
 
         self.assertEqual(dados["experimentos"]["exp001"]["metricas"][0][1], "100%")
         self.assertEqual(dados["experimentos"]["exp002"]["metricas"][2][1], "100%")
+        self.assertEqual(dados["experimentos"]["exp003"]["metricas"][1][1], "100%")
 
     def test_atualizacao_cria_json_que_o_navegador_pode_ler(self) -> None:
         with tempfile.TemporaryDirectory() as diretorio:
